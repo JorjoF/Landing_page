@@ -9,20 +9,26 @@
     qoute text: 36px light italic #1f2937
 */
 
-*{
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+html{
+    font-family: 'roboto';
+    position: relative;
+    min-height: 100%;
 }
 
 body{
     display: flex;
-    margin: 0;
+    margin: 0 0 ;
     padding: 0;
+    height: 100%;
     flex-direction: column;
+    justify-content: end;
 }
 
-.header{
-
+.header, .footer{
     background-color: #1F2937;
+}
+.header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,23 +51,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    height: 35vh;
     background-color: #1F2937;
     
 }
 
-.intro, .img{
+.hero-intro, .hero-img{
  width: 450px;
  margin: 32px 16px;
 }
 
-.img{
+.hero-img{
     display: flex;
     justify-content: center;
     align-items: center;
     color: #F9FAF8;
     background-color: #616e80;
-    height: 20vh;
+    height: 200px;
 }
 
 
@@ -82,9 +88,117 @@ body{
     padding: 8px 32px;
     border-radius: 8px;
     margin-top: 8px;
-    
 }
 
+.cards{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: space-around;
+    height: 35vh;
+
+}
+.cards-title{
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+}
+.card-holder{
+    display: flex;
+    gap: 48px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 175px;
+}
+
+.card-img{
+    width: 150px;
+    height: 150px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #3882F6;
+}
+.card-subtitle{
+    font-size: 18px;
+    text-align: center;
+    word-wrap: break-word;
+    color: #495058;
+}
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E7EB;
+}
+
+.quote-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 900px;
+}
+
+.quote-content{
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1F2937;
+}
+.quote-author{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #1F2937;
+
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+}
+.modal{
+    display: flex;
+    align-items: center;
+    padding: 48px 0;
+    border-radius: 8px;
+    background-color: #3882F6;
+    width: 900px;
+    justify-content: space-around;
+}
+.modal-title, .modal-subtitle{
+    margin: 0;
+}
+.modal-title{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #F9FAF8;
+}
+
+.modal-subtitle{
+    color: #E5E7EB;
+}
+.signup.contact-button{
+    border-style: solid;
+    border-color: #F9FAF8;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    color: #F9FaF8;
+    align-items: center;
+    font-size: 18px;
+}
 ul{
     list-style: none;
     padding: 0;
@@ -99,10 +213,18 @@ a{
 
 button{
     background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+footer{
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
 }
